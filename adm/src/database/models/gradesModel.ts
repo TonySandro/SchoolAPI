@@ -11,15 +11,19 @@ export const gradesModel = db.define("grades", {
     },
     n1: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
     },
     n2: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
     },
     n3: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
     },
     n4: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
     }
 }, {
     freezeTableName: true,
