@@ -11,6 +11,10 @@ export const studentModel = db.define("student", {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
     }
+}, {
+    freezeTableName: true,
+    timestamps: false,
+    createdAt: false
 })

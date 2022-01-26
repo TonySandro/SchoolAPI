@@ -21,6 +21,10 @@ export const gradesModel = db.define("grades", {
     n4: {
         type: DataTypes.INTEGER,
     }
+}, {
+    freezeTableName: true,
+    timestamps: false,
+    createdAt: false
 })
 
 gradesModel.belongsTo(studentModel, {
