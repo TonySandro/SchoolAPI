@@ -1,12 +1,11 @@
 import { Request, Response } from "express";
-import { dbFake } from "../repository/dbFake";
+import { studentModel } from "../database/models/studentModel"
 
 export class GetAll {
     async getAll(req: Request, res: Response) {
-        try {
-            return res.send(dbFake)
-        } catch (error) {
-            return res.send(error)
-        }
+        const student = await studentModel.findAll()
+        return student.length > 0
+            ? res.status(200).json(student)
+            : res.status(204).send()
     }
 }
