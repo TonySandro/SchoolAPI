@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize"
-import { db } from "../db"
+import { db } from "../connection/db"
 
 export const studentModel = db.define("student", {
     id: {
